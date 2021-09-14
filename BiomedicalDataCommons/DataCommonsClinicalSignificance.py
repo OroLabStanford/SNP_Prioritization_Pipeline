@@ -1,3 +1,4 @@
+API_KEY = <my_api_key>
 
 def set_up_environment(API_KEY):
 	# Import Data Commons
@@ -62,7 +63,7 @@ def count_instances(dict_clin_sig):
   
 
 def main():
-	set_up_environment('AIzaSyDLtoWxj15sgYgQx0uBqHhbxpS1WYtfuds')
+	set_up_environment(API_KEY)
 	# start clock
 	start_time = time.time()
 

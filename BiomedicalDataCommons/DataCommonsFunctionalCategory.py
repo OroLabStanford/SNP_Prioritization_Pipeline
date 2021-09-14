@@ -1,3 +1,4 @@
+API_KEY = <my_api_key>
 
 def set_up_environment(API_KEY):
 	# Import Data Commons
@@ -116,7 +117,7 @@ def count_instances(d):
   
 
 def main():
-	set_up_environment('AIzaSyDLtoWxj15sgYgQx0uBqHhbxpS1WYtfuds')
+	set_up_environment(API_KEY)
 	start_time=time.time()
 	dict_genetic_variant=get_variant_functional_category(pd.read_csv(io.BytesIO(uploaded['Type_1_Diabetes_GM12878_cohesin_SNPs.txt']), names=["SNPs"]))
 	dict_counts = count_instances(dict_genetic_variant)

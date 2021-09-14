@@ -1,1 +1,1 @@
-Scripts that can be used to perform analyses drawing data from Google Biomedical Data Commons
+Scripts that can be used to perform analyses drawing data from Google Biomedical Data Commons. In order to use these scripts a Google Data Commons key needs to be generated. This can be done by following documentation on the [Data Commons API](https://docs.datacommons.org/api/). This key should then be set equal to the global variable API_KEY in each script.

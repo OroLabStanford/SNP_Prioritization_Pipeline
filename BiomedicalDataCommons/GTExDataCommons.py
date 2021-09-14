@@ -1,3 +1,5 @@
+API_KEY = <my_api_key>
+
 def set_up_environment(API_KEY):
   # Import Data Commons
   import datacommons as dc
@@ -64,7 +66,7 @@ return(dict_tissue_count)
  
 
 def main():
-  set_up_environment('AIzaSyDLtoWxj15sgYgQx0uBqHhbxpS1WYtfuds')
+  set_up_environment(API_KEY)
   start_time=time.time()
   dict_snp_genes=read_candidate_snps()
   dict_tissue_count = query_data_commons(dict_snp_genes)

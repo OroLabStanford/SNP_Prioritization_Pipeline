@@ -32,13 +32,13 @@ def set_up_environment(API_KEY):
 	root = 'https://api.datacommons.org'
 
 def query_data_commons(list_gv):
-	dict_clin_sig = []
+	dict_clin_sig = {}
 	for snp in list_gv:
 	  try:
 	    temp = dc.get_property_values(['bio/' + snp], 'clinicalSignificance')
-	    dict_snps_clin_sig[snp] = temp['bio/' + snp]
+	    dict_clin_sig[snp] = temp['bio/' + snp]
 	  except:
-	    dict_snps_clin_sig[snp] = ['Unknown']
+	    dict_clin_sig[snp] = ['Unknown']
 	return(dict_clin_sig)
 
 def count_instances(dict_clin_sig):

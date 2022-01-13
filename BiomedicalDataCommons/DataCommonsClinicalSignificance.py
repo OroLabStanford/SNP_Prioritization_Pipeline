@@ -45,7 +45,7 @@ def count_instances(dict_clin_sig):
 	# Count the number of snps in each clinicalSignificance Category
 	rename_dict = {'ClinSigBenign': 'Benign', 'ClinSigUncertain': 'Unknown'}
 	counts_dict = {'Unknown': 0, 'Conflicting': 0}
-	for snp, clinSig in dict_snps_clin_sig.items():
+	for snp, clinSig in dict_clin_sig.items():
 	  if len(clinSig) > 1:
 	    counts_dict['Conflicting'] += 1
 	    continue

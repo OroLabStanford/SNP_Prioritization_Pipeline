@@ -63,6 +63,9 @@ def reformat_clin_sig(list_clin_sig):
   set_renamed = set()
   for item in list_clin_sig:
     set_renamed.add(dict_rename[item])
+  # remove unknown if another report of clinical significance exists
+  if len(set_renamed) > 1 and 'Unknown' in set_renamed:
+    set_renamed = set_renamed.remove('Unknown')
   return list(set_renamed)
 
 

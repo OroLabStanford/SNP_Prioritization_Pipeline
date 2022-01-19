@@ -1,6 +1,7 @@
 """
 Author: Samantha Piekos
 Date: 1/12/22
+Last Edited Date: 1/19/22
 Name: get_genetic_variant_clinical_significance.py
 Description: "This queries Biomedical Data Commons using the python API to get
 the clinical significance of each genetic variant from an input file that
@@ -65,7 +66,7 @@ def reformat_clin_sig(list_clin_sig):
     set_renamed.add(dict_rename[item])
   # remove unknown if another report of clinical significance exists
   if len(set_renamed) > 1 and 'Unknown' in set_renamed:
-    set_renamed = set_renamed.remove('Unknown')
+    set_renamed.remove('Unknown')
   return list(set_renamed)
 
 
@@ -117,9 +118,9 @@ def reformat_instances(dict_clin_sig):
 def print_dict_to_file(filename_export, d):
   # write results of final formatted dictionary to export file
   w = open(filename_export, 'w')
-  w.write('rsID\tclinical_significance')
+  w.write('rsID\tclinical_significance\n')
   for k, v in d.items():
-    w.write(k + '\t' + v)
+    w.write(k + '\t' + v + '\n')
 
 
 def identify_clinical_significance(filename_import, filename_export):
